@@ -1,27 +1,25 @@
-
 # Bootimber
 
-**Bootimber** is a Wordpress Theme with [Twig](https://twig.symfony.com/) templating language provided by [Timber](https://github.com/timber). It's a modified [fork](https://github.com/timber/starter-theme) of Timber Starter-theme with added Bootstrap 4 and Gulp automation (BrowserSync, Sass, Autoprefixer, Cssnano)
+**Bootimber** is a Wordpress Theme with [Twig](https://twig.symfony.com/) templating language provided by [Timber](https://github.com/timber). It's a modified [fork](https://github.com/timber/starter-theme) of Timber Starter-theme with added and Gulp automation (BrowserSync, Sass, Autoprefixer, Cssnano)
 
 ## Dependencies
 
-* timber & twig (Composer)
-* autoprefixer 9.6.0
-* bootstrap 4.3.1
-* browser-sync 2.26.7
-* cssnano 4.1.10
-* gulp 4.0.2
-* gulp-postcss 8.0.0
-* gulp-sass 4.0.2"
+- timber & twig (Composer)
+- autoprefixer 9.6.0
+- browser-sync 2.26.7
+- cssnano 4.1.10
+- gulp 4.0.2
+- gulp-postcss 8.0.0
+- gulp-sass 4.0.2"
 
 ## Installation
 
 1. Install Wordpress and go to wp-content/themes/
-2. `git clone https://github.com/tomlecki/bootimber.git` or [download](https://github.com/tomlecki/bootimber/archive/master.zip) and extract this repository
+2. `git@github.com:VictorTuiranNivelics/StackWordpressTimberTwig.git` or [download](https://github.com/VictorTuiranNivelics/StackWordpressTimberTwig) and extract this repository
 3. `cd bootimber`
-3. `composer install` - Timber installation (`/vendor` folder will be created)
-4. `npm install` - Gulp, Bootstrap, BrowserSync, Sass, Autoprefixer, Cssnano installation (`/node-modules` folder will be created)
-5. Activate theme in WP Admin panel
+4. `composer install` - Timber installation (`/vendor` folder will be created)
+5. `npm install` - Gulp, Bootstrap, BrowserSync, Sass, Autoprefixer, Cssnano installation (`/node-modules` folder will be created)
+6. Activate theme in WP Admin panel
 
 ## How to start developing?
 
@@ -34,17 +32,17 @@
 
 ## Gulp configuration in gulpfile.js
 
-* Change `proxy:` (line 26) to your local dev url like `http://localhost/your-website` or `your-website.dev`
-* Uncomment `cssnano()` for production (optional)
-* first use `gulp style` to generate initial CSS, and then `gulp.watch` to watch for .scss and .twig changes + start BrowserSync
+- Change `proxy:` (line 26) to your local dev url like `http://localhost/your-website` or `your-website.dev`
+- Uncomment `cssnano()` for production (optional)
+- first use `gulp style` to generate initial CSS, and then `gulp.watch` to watch for .scss and .twig changes + start BrowserSync
 
 ## File structure in /templates
 
 - `/base` - files included in base.twig
-  - `html-header.twig` - standard head section 
-  - `nav.twig` - Bootstrap navigation example 
+  - `html-header.twig` - standard head section
+  - `nav.twig` - Bootstrap navigation example
   - `footer.twig` - footer section
-  - `scripts.twig` - CDN JS scripts 
+  - `scripts.twig` - CDN JS scripts
 - `/parts` - all includes outside base.twig
   - `pagination.twig` - ready Bootstrap pagination
   - `macros.twig` - macro example
@@ -57,12 +55,10 @@
 - `index.twig` - basic template if nothing else is found
 - `search.twig` - template for search results
 - `archive.twig`
-- `404.twig` 
+- `404.twig`
 
 ## Resources
 
-* [Timber Docs](https://timber.github.io/docs/)
-* [Twig Docs](https://twig.symfony.com/doc/2.x/)
-* [Bootstrap](https://getbootstrap.com/)
-* [WP Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
-
+- [Timber Docs](https://timber.github.io/docs/)
+- [Twig Docs](https://twig.symfony.com/doc/2.x/)
+- [WP Template Hierarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/)
