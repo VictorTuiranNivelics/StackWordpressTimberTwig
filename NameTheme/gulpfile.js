@@ -1,29 +1,28 @@
-const gulp            = require('gulp');
-const sass            = require('gulp-sass');
-const browserSync     = require('browser-sync').create();
-const postcss         = require('gulp-postcss');
-const autoprefixer    = require('autoprefixer');
-const cssnano         = require('cssnano');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const browserSync = require('browser-sync').create();
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const plugins = [
-    autoprefixer(),
-    // cssnano()
+  autoprefixer(),
+  // cssnano()
 ];
 
 function style() {
   return gulp.src('./scss/**/*.scss')
-  .pipe(sass({
-    includePaths: ['node_modules/bootstrap/scss/']
-  }).on('error', sass.logError))
-  .pipe(postcss(plugins))
-  .pipe(gulp.dest('./css'))
-  .pipe(browserSync.stream());
-  }
+    .pipe(sass({
+    }).on('error', sass.logError))
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream());
+}
 
 function watch() {
   browserSync.init({
-    proxy: "bootimber.local",
-    browser: "firefox"
+    proxy: "http://localhost/acdi-voca/",
+    browser: "chorme"
   })
   gulp.watch('./scss/**/*.scss', style)
   gulp.watch('./templates/**/*.twig').on('change', browserSync.reload)
